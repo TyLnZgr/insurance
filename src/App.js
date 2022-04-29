@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import InsuranceList from './components/Insurance/InsuranceList';
 
 function App() {
+
   return (
-    <div>
-      
-    </div>
+    <InsuranceList/>
   );
 }
 
