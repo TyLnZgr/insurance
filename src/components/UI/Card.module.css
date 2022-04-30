@@ -1,11 +1,10 @@
-.card{
-    width: 90%;
-    max-width: 60rem;
-    padding: 3.5rem;
-    margin: 2rem auto;
-    text-align: center;
-    background: white;
-    border:1px solid #d7dad9;
-    border-radius: 5px;
-   /*  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26); */
+.card {
+  width: 90%;
+  max-width: 70rem;
+  padding: 2rem 3rem;
+  margin: 2rem auto;
+  text-align: center;
+  background: white;
+  border: 1px solid #d7dad9;
+  border-radius: 5px;
 }
