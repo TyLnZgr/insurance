@@ -28,12 +28,13 @@ const InsuranceList3 = (props) => {
       });
   }, [count]);
 
+  const sortInsurances = insurances.slice().sort((a, b) => a.Cash - b.Cash);
   if (isLoading) {
     return <Loader />;
   }
   return (
     <>
-      {insurances.map((ins, i) => (
+      {sortInsurances.map((ins, i) => (
         <Insurance key={i} insurances={ins}></Insurance>
       ))}
     </>
