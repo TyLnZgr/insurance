@@ -28,3 +28,13 @@
   color: #007fff;
   font-size: 0.3rem;
 }
+
+@media (max-width: 768px) {
+  .img {
+    max-width: 4rem;
+    padding: 0.2rem 1rem 0 0.2rem;
+  }
+  p {
+    font-size: 0.6rem;
+  }
+}

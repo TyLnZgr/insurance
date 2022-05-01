@@ -8,3 +8,11 @@
   border: 1px solid #d7dad9;
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .card {
+    width: 30rem;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem auto;
+  }
+}

@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Loader from "../UI/Loader";
 import Insurance from "./Insurance";
+import ErrorModal from "../UI/ErrorModal";
 
 const InsuranceList3 = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -27,8 +28,8 @@ const InsuranceList3 = (props) => {
         setIsLoading(false);
       });
   }, [count]);
-
   const sortInsurances = insurances.slice().sort((a, b) => a.Cash - b.Cash);
+  console.log(sortInsurances);
   if (isLoading) {
     return <Loader />;
   }

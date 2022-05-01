@@ -19,3 +19,10 @@ strike {
   font-size: 0.6rem;
   margin-right: 3px;
 }
+@media (max-width: 768px) {
+  h6,
+  span,
+  strike {
+    font-size: 0.4rem;
+  }
+}

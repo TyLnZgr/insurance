@@ -5,7 +5,7 @@ import spinner from "../../assets/Loading_icon.gif";
 const Loader = (props) => {
   return (
     <>
-      <img src={spinner} className={styles.loading} />
+      <img src={spinner} className={styles.loading} alt="Loading" />
       {props.children}
     </>
   );

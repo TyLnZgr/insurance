@@ -9,7 +9,11 @@ const Insurance = (props) => {
   return (
     <Card className={styles.flex}>
       <div className={`${styles.flex} ${styles.center}`}>
-        <img className={styles.img} src={props.insurances.ImagePath} />
+        <img
+          className={styles.img}
+          src={props.insurances.ImagePath}
+          alt="logo"
+        />
         <div>
           <h6 className={styles["text-bold"]}>
             {props.insurances.ProductDesc}
