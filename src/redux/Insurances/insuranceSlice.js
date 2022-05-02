@@ -8,12 +8,19 @@ export const fetchInsurances = createAsyncThunk(
     return res.data.offerList;
   }
 );
+export const fetchCount = createAsyncThunk("count/getCount", async () => {
+  const res = await axios(
+    `${process.env.REACT_APP_API_BASE_ENDPOINT}/get_offer_count`
+  );
+  return res.data.num_offers;
+});
 
 export const insuranceSlice = createSlice({
   name: "insurance",
   initialState: {
     items: [],
     isLoading: false,
+    count: 0,
   },
   reducers: {},
   extraReducers: {
@@ -23,6 +30,9 @@ export const insuranceSlice = createSlice({
     [fetchInsurances.fulfilled]: (state, action) => {
       state.items = action.payload;
       state.isLoading = false;
+    },
+    [fetchCount.fulfilled]: (state, action) => {
+      state.count = action.payload;
     },
   },
 });
