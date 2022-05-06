@@ -10,36 +10,35 @@ const InsuranceList3 = (props) => {
   const [insurances, setInsurances] = useState([]);
   const count = useSelector((state) => state.insurance.count);
   const dispatch = useDispatch();
-  let i = 0;
+  let [fetchI, setFetchI] = useState(1);
 
   useEffect(() => {
     dispatch(fetchCount());
   }, []);
-
-  useEffect(() => {
+  useState(() => {
     const interval = setInterval(() => {
-      if (i <= count) {
-        i += 1;
-        console.log(i);
+      if (fetchI <= count) {
+        setFetchI((fetchI += 1));
+        console.log(fetchI);
       }
-      if (i === count) {
+      if (fetchI === count) {
         clearInterval(interval);
       }
     }, 1000);
-  }, [i]);
-
+  }, [fetchI]);
   useEffect(() => {
     setIsLoading(true);
     axios(`${process.env.REACT_APP_API_BASE_ENDPOINT}/case3`)
       .then((res) => {
-        setInsurances([...insurances, res.data]);
+        setInsurances((prevState) => [...prevState, res.data]);
         setIsLoading(false);
       })
       .catch((e) => {
         console.log(e);
         setIsLoading(false);
       });
-  }, [i]);
+  }, [fetchI]);
+
   const sortedRows = React.useMemo(
     () => [...insurances].sort((a, b) => a.Cash - b.Cash),
     [insurances]
