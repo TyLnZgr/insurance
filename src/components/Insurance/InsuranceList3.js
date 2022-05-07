@@ -24,7 +24,7 @@ const InsuranceList3 = (props) => {
       if (fetchI === count) {
         clearInterval(interval);
       }
-    }, 1000);
+    }, 500);
   }, [fetchI]);
   useEffect(() => {
     setIsLoading(true);
@@ -39,16 +39,15 @@ const InsuranceList3 = (props) => {
       });
   }, [fetchI]);
 
-  const sortedRows = React.useMemo(
-    () => [...insurances].sort((a, b) => a.Cash - b.Cash),
-    [insurances]
+  const sortedInsurances = React.useMemo(() =>
+    [...insurances].sort((a, b) => a.Cash - b.Cash)
   );
   if (isLoading) {
     return <Loader />;
   }
   return (
     <>
-      {sortedRows.map((ins, i) => (
+      {sortedInsurances.map((ins, i) => (
         <Insurance key={i} insurances={ins}></Insurance>
       ))}
     </>

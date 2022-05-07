@@ -11,18 +11,10 @@ html {
 
 h6 {
   text-align: left;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
+
 span,
 strike {
-  display: inline-block;
-  font-size: 0.6rem;
-  margin-right: 3px;
-}
-@media (max-width: 768px) {
-  h6,
-  span,
-  strike {
-    font-size: 0.4rem;
-  }
+  font-size: 0.7rem;
 }

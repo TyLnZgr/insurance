@@ -1,40 +1,87 @@
-.img {
-  padding: 0.5rem 2rem 0 0.5rem;
-  margin-right: 0.5rem;
-  border-right: 1px solid #d7dad9;
-  max-width: 8.5rem;
-}
-.flex {
+.container {
   display: flex;
-  justify-content: space-between;
-}
-.flex2 {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-}
-.center {
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
-.text-bold {
-  font-weight: bold;
+.container__img {
+  margin-right: 1.5rem;
+  border-right: 1px solid #d7dad9;
+  max-width: 10rem;
+  height: auto;
+  padding-right: 2rem;
 }
-.btn__true {
-  background-color: #007fff;
-  color: #fff;
+.container__item {
+  margin-left: 40rem;
 }
-.btn__false {
-  background-color: #fff;
-  color: #007fff;
-  font-size: 0.3rem;
+.container__text--bold {
+  font-weight: 800;
 }
 
-@media (max-width: 768px) {
-  .img {
-    max-width: 4rem;
-    padding: 0.2rem 1rem 0 0.2rem;
+.btn__true {
+  margin-left: 50rem;
+  background-color: #007fff;
+  color: #fff;
+  font-weight: bold;
+}
+.btn__false {
+  margin-left: 50rem;
+  background-color: #fff;
+  color: #007fff;
+  font-size: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .container__img {
+    max-width: 4.5rem;
   }
-  p {
-    font-size: 0.6rem;
+  .container__item {
+    margin-left: 5%;
+  }
+  .container__text--bold {
+    font-weight: 700;
+  }
+  .btn__true {
+    margin-left: 20%;
+    font-weight: bold;
+  }
+  .btn__false {
+    margin-left: 20%;
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .container__img {
+    margin-right: 7%;
+    max-width: 7rem;
+  }
+  .container__item {
+    margin-left: 50%;
+  }
+  .btn__true {
+    margin-left: 80%;
+    font-weight: bold;
+  }
+  .btn__false {
+    margin-left: 80%;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .container__img {
+    margin-right: 7%;
+    max-width: 7rem;
+  }
+  .container__item {
+    margin-left: 50%;
+  }
+  .btn__true {
+    margin-left: 80%;
+    font-weight: bold;
+  }
+  .btn__false {
+    margin-left: 80%;
+    font-size: 0.5rem;
   }
 }

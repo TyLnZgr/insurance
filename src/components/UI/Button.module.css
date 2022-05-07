@@ -7,9 +7,13 @@
   text-align: center;
   width: 12rem;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .button {
-    width: 6rem;
+    width: 5rem;
+  }
+}
+@media (max-width: 900px) {
+  .button {
+    width: 7rem;
   }
 }
